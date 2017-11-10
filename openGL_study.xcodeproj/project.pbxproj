@@ -101,15 +101,11 @@
 		012730FF1FB5435F00E69911 /* openGL_study */ = {
 			isa = PBXGroup;
 			children = (
+				012731331FB5438500E69911 /* Supporting Files */,
 				012731001FB5435F00E69911 /* AppDelegate.h */,
 				012731011FB5435F00E69911 /* AppDelegate.m */,
 				012731031FB5435F00E69911 /* ViewController.h */,
 				012731041FB5435F00E69911 /* ViewController.m */,
-				012731061FB5435F00E69911 /* Main.storyboard */,
-				012731091FB5435F00E69911 /* Assets.xcassets */,
-				0127310B1FB5435F00E69911 /* LaunchScreen.storyboard */,
-				0127310E1FB5435F00E69911 /* Info.plist */,
-				0127310F1FB5435F00E69911 /* main.m */,
 			);
 			path = openGL_study;
 			sourceTree = "<group>";
@@ -130,6 +126,18 @@
 				012731261FB5435F00E69911 /* Info.plist */,
 			);
 			path = openGL_studyUITests;
+			sourceTree = "<group>";
+		};
+		012731331FB5438500E69911 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				012731061FB5435F00E69911 /* Main.storyboard */,
+				012731091FB5435F00E69911 /* Assets.xcassets */,
+				0127310B1FB5435F00E69911 /* LaunchScreen.storyboard */,
+				0127310E1FB5435F00E69911 /* Info.plist */,
+				0127310F1FB5435F00E69911 /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,7 +439,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = openGL_study/Info.plist;
+				DEVELOPMENT_TEAM = HKMJ74ZPK7;
+				INFOPLIST_FILE = "openGL_study/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maxst.openGL-study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +454,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = openGL_study/Info.plist;
+				DEVELOPMENT_TEAM = HKMJ74ZPK7;
+				INFOPLIST_FILE = "openGL_study/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "maxst.openGL-study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
