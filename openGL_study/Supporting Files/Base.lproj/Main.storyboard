@@ -12,6 +12,7 @@
         <!--GLKit View Controller-->
         <scene sceneID="xhX-mo-sEQ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWx-rV-k2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <glkViewController preferredFramesPerSecond="30" id="9Kb-qu-7XH" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yPi-GO-wA3"/>
@@ -25,9 +26,8 @@
                         </connections>
                     </glkView>
                 </glkViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uWx-rV-k2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="86"/>
+            <point key="canvasLocation" x="375" y="-4"/>
         </scene>
     </scenes>
 </document>
