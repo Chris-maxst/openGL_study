@@ -39,6 +39,3 @@ protected:
     GLKMatrix4 localMVPMatrix;
     GLKMatrix4 projectionMatrix;
 };
-
-
-
