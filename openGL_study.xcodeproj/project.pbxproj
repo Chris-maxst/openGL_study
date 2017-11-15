@@ -20,6 +20,10 @@
 		019368E11FB967F700788B28 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 019368DF1FB967F700788B28 /* Square.cpp */; };
 		019368E31FB969F900788B28 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019368E21FB968F100788B28 /* GLKit.framework */; };
 		019368E51FB980CE00788B28 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 019368E41FB980CE00788B28 /* Cube.cpp */; };
+		019368E91FBAC90000788B28 /* TextureCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 019368E81FBAC90000788B28 /* TextureCube.cpp */; };
+		019368EC1FBAE37600788B28 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 019368EB1FBAE37600788B28 /* dice.png */; };
+		019368EE1FBAE88500788B28 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = 019368ED1FBAE88500788B28 /* brick.png */; };
+		019368F11FBBCE4B00788B28 /* UIImage+Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 019368F01FBBCE4A00788B28 /* UIImage+Converter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,12 @@
 		019368E41FB980CE00788B28 /* Cube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		019368E61FB980D700788B28 /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
 		019368E71FB9944700788B28 /* vecmath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vecmath.h; sourceTree = "<group>"; };
+		019368E81FBAC90000788B28 /* TextureCube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TextureCube.cpp; sourceTree = "<group>"; };
+		019368EA1FBAC90F00788B28 /* TextureCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureCube.h; sourceTree = "<group>"; };
+		019368EB1FBAE37600788B28 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
+		019368ED1FBAE88500788B28 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
+		019368EF1FBBCE4A00788B28 /* UIImage+Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Converter.h"; sourceTree = "<group>"; };
+		019368F01FBBCE4A00788B28 /* UIImage+Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Converter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,8 @@
 		012730FF1FB5435F00E69911 /* openGL_study */ = {
 			isa = PBXGroup;
 			children = (
+				019368ED1FBAE88500788B28 /* brick.png */,
+				019368EB1FBAE37600788B28 /* dice.png */,
 				019368D81FB9639100788B28 /* Renderer */,
 				012731331FB5438500E69911 /* Supporting Files */,
 				012731001FB5435F00E69911 /* AppDelegate.h */,
@@ -178,6 +190,10 @@
 				019368E41FB980CE00788B28 /* Cube.cpp */,
 				019368E61FB980D700788B28 /* Cube.h */,
 				019368E71FB9944700788B28 /* vecmath.h */,
+				019368E81FBAC90000788B28 /* TextureCube.cpp */,
+				019368EA1FBAC90F00788B28 /* TextureCube.h */,
+				019368EF1FBBCE4A00788B28 /* UIImage+Converter.h */,
+				019368F01FBBCE4A00788B28 /* UIImage+Converter.m */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -288,6 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				019368EE1FBAE88500788B28 /* brick.png in Resources */,
+				019368EC1FBAE37600788B28 /* dice.png in Resources */,
 				0127310D1FB5435F00E69911 /* LaunchScreen.storyboard in Resources */,
 				0127310A1FB5435F00E69911 /* Assets.xcassets in Resources */,
 				012731081FB5435F00E69911 /* Main.storyboard in Resources */,
@@ -316,9 +334,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				019368E11FB967F700788B28 /* Square.cpp in Sources */,
+				019368F11FBBCE4B00788B28 /* UIImage+Converter.m in Sources */,
 				012731051FB5435F00E69911 /* ViewController.mm in Sources */,
 				012731101FB5435F00E69911 /* main.m in Sources */,
 				012731021FB5435F00E69911 /* AppDelegate.m in Sources */,
+				019368E91FBAC90000788B28 /* TextureCube.cpp in Sources */,
 				019368E51FB980CE00788B28 /* Cube.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

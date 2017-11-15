@@ -1,8 +1,8 @@
 //
-//  Cube.h
+//  TextureCube.h
 //  openGL_study
 //
-//  Created by kwanghee on 2017. 11. 13..
+//  Created by kwanghee on 2017. 11. 14..
 //  Copyright © 2017년 kwanghee. All rights reserved.
 //
 
@@ -18,11 +18,11 @@
 #include "ShaderUtil.h"
 #include "vecmath.h"
 
-class Cube
+class TextureCube
 {
 public:
-    Cube();
-    ~Cube();
+    TextureCube();
+    ~TextureCube();
     
     void draw();
     void setProjectionMatrix(gl_helper::Mat4 & projection);
@@ -30,20 +30,24 @@ public:
     void setPosition(float x, float y, float z);
     void setRotation(float angle, float x, float y, float z);
     void setScale(float x, float y, float z);
+    void setTexture(unsigned char * data, int width, int height, int length);
 protected:
-    void * vertices;
-    void * indices;
-    void * colors;
+    void * vertices = nullptr;
+    void * textureCoords = nullptr;
     
     int vertextCount = 0;
-    int indexCount = 0;
+    int texCoordCount = 0;
     
     GLuint program = 0;
     GLuint positionHandle = 0;
-    GLuint colorHandle = 0;
+    GLuint textureCoordHandle = 0;
     GLuint mvpMatrixHandle = 0;
+    int textureCount = 0;
+    GLuint textureId;
+    GLuint textureHandle;
     
     gl_helper::Mat4 modelMatrix;
     gl_helper::Mat4 localMVPMatrix;
     gl_helper::Mat4 projectionMatrix;
 };
+

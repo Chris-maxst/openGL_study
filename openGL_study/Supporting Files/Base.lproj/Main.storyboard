@@ -68,21 +68,36 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVK-HO-Kd1">
-                                <rect key="frame" x="320.5" y="588" width="38.5" height="20"/>
+                                <rect key="frame" x="168.5" y="588" width="38.5" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncP-PI-ClT">
+                                <rect key="frame" x="89" y="618" width="60" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="RLB-kg-GNS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Brick">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonBrick:" destination="9Kb-qu-7XH" eventType="touchUpInside" id="7Pf-FX-Kf5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="9WM-iq-TWR" firstAttribute="top" secondItem="yVK-HO-Kd1" secondAttribute="bottom" constant="10" id="0Fi-nx-MJx"/>
+                            <constraint firstItem="Jzj-bI-0rP" firstAttribute="top" secondItem="ncP-PI-ClT" secondAttribute="bottom" constant="16" id="3aD-6X-pUh"/>
+                            <constraint firstItem="9WM-iq-TWR" firstAttribute="top" secondItem="yVK-HO-Kd1" secondAttribute="bottom" constant="10" id="5AF-pw-PKf"/>
                             <constraint firstItem="Jzj-bI-0rP" firstAttribute="top" secondItem="8yd-fl-Xhy" secondAttribute="bottom" constant="16" id="BfF-O0-TGz"/>
                             <constraint firstItem="Jzj-bI-0rP" firstAttribute="top" secondItem="9WM-iq-TWR" secondAttribute="bottom" constant="16" id="Kj5-tt-YDo"/>
                             <constraint firstItem="9WM-iq-TWR" firstAttribute="trailing" secondItem="Cj1-WD-RDb" secondAttribute="trailingMargin" id="UWr-lW-8gb"/>
                             <constraint firstItem="Jzj-bI-0rP" firstAttribute="top" secondItem="Vqy-5N-SR6" secondAttribute="bottom" constant="16" id="XlJ-mw-Kbr"/>
+                            <constraint firstItem="yVK-HO-Kd1" firstAttribute="centerX" secondItem="Cj1-WD-RDb" secondAttribute="centerX" id="bl2-1p-Fjj"/>
                             <constraint firstItem="Vqy-5N-SR6" firstAttribute="leading" secondItem="8yd-fl-Xhy" secondAttribute="trailing" constant="10" id="jN6-2A-OtO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yVK-HO-Kd1" secondAttribute="trailing" id="mcT-91-G7a"/>
                             <constraint firstItem="9WM-iq-TWR" firstAttribute="leading" secondItem="Vqy-5N-SR6" secondAttribute="trailing" constant="10" id="s4C-1n-eeD"/>
+                            <constraint firstItem="8yd-fl-Xhy" firstAttribute="leading" secondItem="ncP-PI-ClT" secondAttribute="trailing" constant="10" id="uxC-gj-yun"/>
                         </constraints>
                         <connections>
                             <outlet property="delegate" destination="9Kb-qu-7XH" id="uVQ-D2-ChN"/>

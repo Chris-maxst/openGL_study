@@ -9,17 +9,22 @@
 #import "ViewController.h"
 #import "Square.h"
 #import "Cube.h"
+#import "TextureCube.h"
+#import "UIImage+Converter.h"
 
 typedef enum tagOBJECT_MODE {
     SQUARE = 0,
     CUBE_ORTHO = 1,
     CUBE_PERSPECTIVE = 2,
+    TEXTURE_CUBE_BRICK = 3,
+    TEXTURE_CUBE_DICE = 4,
 } OBJECT_MODE;
 
 @interface ViewController ()
 {
     Square *square;
     Cube *cube;
+    TextureCube *textureCube;
     
     float screenSizeWidth;
     float screenSizeHeight;
@@ -40,14 +45,25 @@ typedef enum tagOBJECT_MODE {
     
     square = new Square();
     cube = new Cube();
+    textureCube = new TextureCube();
     
-    gl_helper::Mat4 modelMatrix = gl_helper::Mat4::Translation(0, 0, -100);
+    gl_helper::Mat4 modelMatrix = gl_helper::Mat4::Translation(0, 0, -20);
     cube->setTransform(modelMatrix);
+    
+    float aspect = screenSizeWidth / screenSizeHeight;
+    gl_helper::Mat4 projection = gl_helper::Mat4::Ortho(-10 * aspect, 10 * aspect, -10, 10, -1, -200).Transpose();
+    textureCube->setProjectionMatrix(projection);
+    textureCube->setTransform(modelMatrix);
+    
+    NSString *brickPath = [[NSBundle mainBundle] pathForResource:@"brick" ofType:@"png"];
+    UIImage *brickImage = [UIImage imageWithContentsOfFile:brickPath];
+    unsigned char *imageData = [UIImage UIImageToByteArray:brickImage];
+    textureCube->setTexture(imageData, brickImage.size.width, brickImage.size.height, brickImage.size.width * brickImage.size.height * 4);
 }
 
 - (IBAction)buttonPerspective:(id)sender {
     //perspective로 투영했을때
-    gl_helper::Mat4 projection = gl_helper::Mat4::Perspective(5, screenSizeWidth, screenSizeHeight, 1, 200).Transpose();
+    gl_helper::Mat4 projection = gl_helper::Mat4::Perspective(20, screenSizeWidth, screenSizeHeight, 1, 200).Transpose();
 //    gl_helper::Mat4 projection = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(10.0), screenSizeWidth / screenSizeHeight, 1, 200).m; //ios에서 자체제공하는 matrix 함수
     cube->setProjectionMatrix(projection);
     
@@ -63,12 +79,17 @@ typedef enum tagOBJECT_MODE {
     cube->setProjectionMatrix(projection);
     
     currentMode = CUBE_ORTHO;
-    self.currentModeLabel.text = @"Cube Ortho";
+    self.currentModeLabel.text = @"Cube Orthographic";
 }
 
 - (IBAction)buttonSquare:(id)sender {
     currentMode = SQUARE;
     self.currentModeLabel.text = @"Square";
+}
+
+- (IBAction)buttonBrick:(id)sender {
+    currentMode = TEXTURE_CUBE_BRICK;
+    self.currentModeLabel.text = @"Brick Cube";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,12 +101,20 @@ typedef enum tagOBJECT_MODE {
 {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
+    glEnable(GL_DEPTH_TEST);
     if(currentMode == SQUARE) {
         square->draw();
     } else if(currentMode == CUBE_ORTHO || currentMode == CUBE_PERSPECTIVE) {
         cube->draw();
         cube->setRotation(1, 1, 1, 1);
+    } else if(currentMode == TEXTURE_CUBE_DICE) {
+        textureCube->draw();
+        textureCube->setRotation(1, 1, 1, 1);
+    } else if(currentMode == TEXTURE_CUBE_BRICK) {
+        textureCube->draw();
+        textureCube->setRotation(1, 1, 1, 1);
     }
+    glDisable(GL_DEPTH_TEST);
 }
 
 -(void) setupGLcontext
