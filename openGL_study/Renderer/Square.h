@@ -10,10 +10,12 @@
 
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
-#include <GLKit/GLKMatrix4.h>
 
 #include <memory.h>
 #include <string.h>
+
+#include "ShaderUtil.h"
+#include "vecmath.h"
 
 class Square
 {
@@ -35,7 +37,7 @@ protected:
     GLuint colorHandle = 0;
     GLuint mvpMatrixHandle = 0;
     
-    GLKMatrix4 modelMatrix;
-    GLKMatrix4 localMVPMatrix;
-    GLKMatrix4 projectionMatrix;
+    gl_helper::Mat4 modelMatrix;
+    gl_helper::Mat4 localMVPMatrix;
+    gl_helper::Mat4 projectionMatrix;
 };

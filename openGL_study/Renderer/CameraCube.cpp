@@ -1,12 +1,12 @@
 //
-//  TextureCube.cpp
+//  CameraCube.cpp
 //  openGL_study
 //
-//  Created by kwanghee on 2017. 11. 14..
+//  Created by kwanghee on 2017. 11. 17..
 //  Copyright © 2017년 kwanghee. All rights reserved.
 //
 
-#include "TextureCube.h"
+#include "CameraCube.h"
 
 static float VERTEX_BUF[] =
 {    //Vertices according to faces
@@ -124,7 +124,7 @@ static const char * FRAGMENT_SHADER_SRC =
 "    gl_FragColor = texture2D(u_texture_1, v_texCoord.xy);\n"    \
 "}\n";
 
-TextureCube::TextureCube()
+CameraCube::CameraCube()
 {
     vertices = &VERTEX_BUF[0];
     textureCoords = &TEX_COORD_BUF[0];
@@ -136,52 +136,52 @@ TextureCube::TextureCube()
     modelMatrix = gl_helper::Mat4::Identity();
     projectionMatrix = gl_helper::Mat4::Identity();
     
-    glGenTextures(textureCount, textureIds);
+    glGenTextures(textureCount, &textureId);
     
-    glBindTexture(GL_TEXTURE_2D, textureIds[0]);
+    glBindTexture(GL_TEXTURE_2D, textureId);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 }
 
-TextureCube::~TextureCube()
+CameraCube::~CameraCube()
 {
 }
 
-void TextureCube::setProjectionMatrix(gl_helper::Mat4 & projection)
+void CameraCube::setProjectionMatrix(gl_helper::Mat4 & projection)
 {
     projectionMatrix = projection;
 }
 
-void TextureCube::setTransform(gl_helper::Mat4 & transform)
+void CameraCube::setTransform(gl_helper::Mat4 & transform)
 {
     modelMatrix = transform;
 }
 
-void TextureCube::setPosition(float x, float y, float z)
+void CameraCube::setPosition(float x, float y, float z)
 {
     modelMatrix.PostTranslate(x, y, z);
 }
 
-void TextureCube::setRotation(float angle, float x, float y, float z)
+void CameraCube::setRotation(float angle, float x, float y, float z)
 {
     modelMatrix.PostRotate(angle, x, y, z);
 }
 
-void TextureCube::setScale(float x, float y, float z)
+void CameraCube::setScale(float x, float y, float z)
 {
     modelMatrix.PostScale(x, y, z);
 }
 
-void TextureCube::setTexture(unsigned char * data, int width, int height, int length)
+void CameraCube::setTexture(unsigned char * data, int width, int height, int length)
 {
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, textureIds[0]);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, textureId);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 }
 
-void TextureCube::draw()
+void CameraCube::draw()
 {
     if(program == 0)
     {
@@ -189,7 +189,7 @@ void TextureCube::draw()
         positionHandle = glGetAttribLocation(program, "a_position");
         mvpMatrixHandle = glGetUniformLocation(program, "u_mvpMatrix");
         textureCoordHandle = glGetAttribLocation(program, "a_vertexTexCoord");
-        textureHandles[0] = glGetUniformLocation(program, "u_texture_1");
+        textureHandle = glGetUniformLocation(program, "u_texture_1");
     }
     
     glUseProgram(program);
@@ -204,9 +204,9 @@ void TextureCube::draw()
     localMVPMatrix = projectionMatrix * modelMatrix;
     glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, localMVPMatrix.Ptr());
     
-    glActiveTexture(GL_TEXTURE0);
-    glUniform1i(textureHandles[0], 0);
-    glBindTexture(GL_TEXTURE_2D, textureIds[0]);
+    glActiveTexture(GL_TEXTURE2);
+    glUniform1i(textureHandle, 2);
+    glBindTexture(GL_TEXTURE_2D, textureId);
     
     glDrawArrays(GL_TRIANGLES, 0, 6 * 6);
     
@@ -214,3 +214,4 @@ void TextureCube::draw()
     glDisableVertexAttribArray(textureCoordHandle);
     glUseProgram(0);
 }
+

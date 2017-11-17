@@ -1,8 +1,8 @@
 //
-//  Cube.h
+//  CameraCube.h
 //  openGL_study
 //
-//  Created by kwanghee on 2017. 11. 13..
+//  Created by kwanghee on 2017. 11. 17..
 //  Copyright © 2017년 kwanghee. All rights reserved.
 //
 
@@ -17,32 +17,39 @@
 #include "ShaderUtil.h"
 #include "vecmath.h"
 
-class Cube
+#define MAX_TEXTURE_COUNT 8
+
+class CameraCube
 {
 public:
-    Cube();
-    ~Cube();
+    CameraCube();
+    ~CameraCube();
     
-    void draw();
     void setProjectionMatrix(gl_helper::Mat4 & projection);
     void setTransform(gl_helper::Mat4 & transform);
     void setPosition(float x, float y, float z);
     void setRotation(float angle, float x, float y, float z);
     void setScale(float x, float y, float z);
+    void draw();
+    void setTexture(unsigned char * data, int width, int height, int length);
 protected:
-    void * vertices;
-    void * indices;
-    void * colors;
+    void * vertices = nullptr;
+    void * textureCoords = nullptr;
     
     int vertextCount = 0;
-    int indexCount = 0;
+    int texCoordCount = 0;
     
     GLuint program = 0;
     GLuint positionHandle = 0;
-    GLuint colorHandle = 0;
+    GLuint textureCoordHandle = 0;
     GLuint mvpMatrixHandle = 0;
+    int textureCount = 2;
+    GLuint textureId;
+    GLuint textureHandle;
     
     gl_helper::Mat4 modelMatrix;
     gl_helper::Mat4 localMVPMatrix;
     gl_helper::Mat4 projectionMatrix;
 };
+
+

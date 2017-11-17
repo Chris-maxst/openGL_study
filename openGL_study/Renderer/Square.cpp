@@ -7,7 +7,6 @@
 //
 
 #include "Square.h"
-#include "ShaderUtil.h"
 
 static float VERTEX_BUF[] =
 {
@@ -59,7 +58,7 @@ Square::Square()
     vertextCount = sizeof(VERTEX_BUF) / sizeof(float);
     indexCount = sizeof(INDEX_BUF) / sizeof(unsigned char);
     
-    localMVPMatrix = GLKMatrix4Identity;
+    localMVPMatrix = gl_helper::Mat4::Identity();
 }
 
 Square::~Square()
@@ -85,7 +84,7 @@ void Square::draw()
     glVertexAttribPointer(colorHandle, 4, GL_FLOAT, GL_FALSE, 0, colors);
     glEnableVertexAttribArray(colorHandle);
     
-    glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, localMVPMatrix.m);
+    glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, localMVPMatrix.Ptr());
     
     glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_BYTE, indices);
     

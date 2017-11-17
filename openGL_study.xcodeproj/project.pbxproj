@@ -24,6 +24,14 @@
 		019368EC1FBAE37600788B28 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 019368EB1FBAE37600788B28 /* dice.png */; };
 		019368EE1FBAE88500788B28 /* brick.png in Resources */ = {isa = PBXBuildFile; fileRef = 019368ED1FBAE88500788B28 /* brick.png */; };
 		019368F11FBBCE4B00788B28 /* UIImage+Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 019368F01FBBCE4A00788B28 /* UIImage+Converter.m */; };
+		019368F31FBC200400788B28 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 019368F21FBC200400788B28 /* Background.cpp */; };
+		019368F91FBC310100788B28 /* CameraController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 019368F81FBC310100788B28 /* CameraController.mm */; };
+		019368FC1FBC319800788B28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019368FB1FBC319400788B28 /* AVFoundation.framework */; };
+		019368FE1FBC31A100788B28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019368FD1FBC319F00788B28 /* Foundation.framework */; };
+		019369001FBD55E300788B28 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019368FF1FBD55DF00788B28 /* CoreMedia.framework */; };
+		01D0D2431FBD5F3C00B9455B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D0D2421FBD5F3800B9455B /* Accelerate.framework */; };
+		01D0D2451FBEBE3A00B9455B /* ProjectionMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01D0D2441FBEBE3A00B9455B /* ProjectionMatrix.cpp */; };
+		01D0D2491FBED72A00B9455B /* CameraCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01D0D2481FBED72A00B9455B /* CameraCube.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +83,19 @@
 		019368ED1FBAE88500788B28 /* brick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brick.png; sourceTree = "<group>"; };
 		019368EF1FBBCE4A00788B28 /* UIImage+Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Converter.h"; sourceTree = "<group>"; };
 		019368F01FBBCE4A00788B28 /* UIImage+Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Converter.m"; sourceTree = "<group>"; };
+		019368F21FBC200400788B28 /* Background.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
+		019368F41FBC200D00788B28 /* Background.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		019368F81FBC310100788B28 /* CameraController.mm */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraController.mm; sourceTree = "<group>"; };
+		019368FA1FBC313800788B28 /* CameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraController.h; sourceTree = "<group>"; };
+		019368FB1FBC319400788B28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		019368FD1FBC319F00788B28 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		019368FF1FBD55DF00788B28 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		01D0D2421FBD5F3800B9455B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		01D0D2441FBEBE3A00B9455B /* ProjectionMatrix.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectionMatrix.cpp; sourceTree = "<group>"; };
+		01D0D2461FBEBE4A00B9455B /* ProjectionMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectionMatrix.h; sourceTree = "<group>"; };
+		01D0D2471FBEBF7500B9455B /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		01D0D2481FBED72A00B9455B /* CameraCube.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CameraCube.cpp; sourceTree = "<group>"; };
+		01D0D24A1FBED73300B9455B /* CameraCube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraCube.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +103,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01D0D2431FBD5F3C00B9455B /* Accelerate.framework in Frameworks */,
+				019368FC1FBC319800788B28 /* AVFoundation.framework in Frameworks */,
+				019368FE1FBC31A100788B28 /* Foundation.framework in Frameworks */,
 				0127313B1FB5660300E69911 /* QuartzCore.framework in Frameworks */,
 				0127313A1FB565FB00E69911 /* OpenGLES.framework in Frameworks */,
 				019368E31FB969F900788B28 /* GLKit.framework in Frameworks */,
+				019369001FBD55E300788B28 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +162,8 @@
 				012731011FB5435F00E69911 /* AppDelegate.m */,
 				012731031FB5435F00E69911 /* ViewController.h */,
 				012731041FB5435F00E69911 /* ViewController.mm */,
+				019368FA1FBC313800788B28 /* CameraController.h */,
+				019368F81FBC310100788B28 /* CameraController.mm */,
 			);
 			path = openGL_study;
 			sourceTree = "<group>";
@@ -174,6 +201,10 @@
 		012731371FB565C800E69911 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				01D0D2421FBD5F3800B9455B /* Accelerate.framework */,
+				019368FF1FBD55DF00788B28 /* CoreMedia.framework */,
+				019368FD1FBC319F00788B28 /* Foundation.framework */,
+				019368FB1FBC319400788B28 /* AVFoundation.framework */,
 				019368E21FB968F100788B28 /* GLKit.framework */,
 				012731391FB565DC00E69911 /* OpenGLES.framework */,
 				012731381FB565C800E69911 /* QuartzCore.framework */,
@@ -184,16 +215,23 @@
 		019368D81FB9639100788B28 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
-				019368D01FB956BB00788B28 /* ShaderUtil.h */,
 				019368DF1FB967F700788B28 /* Square.cpp */,
 				019368E01FB967F700788B28 /* Square.h */,
 				019368E41FB980CE00788B28 /* Cube.cpp */,
 				019368E61FB980D700788B28 /* Cube.h */,
-				019368E71FB9944700788B28 /* vecmath.h */,
 				019368E81FBAC90000788B28 /* TextureCube.cpp */,
 				019368EA1FBAC90F00788B28 /* TextureCube.h */,
+				019368F21FBC200400788B28 /* Background.cpp */,
+				019368F41FBC200D00788B28 /* Background.h */,
+				01D0D2481FBED72A00B9455B /* CameraCube.cpp */,
+				01D0D24A1FBED73300B9455B /* CameraCube.h */,
+				01D0D2441FBEBE3A00B9455B /* ProjectionMatrix.cpp */,
+				01D0D2461FBEBE4A00B9455B /* ProjectionMatrix.h */,
 				019368EF1FBBCE4A00788B28 /* UIImage+Converter.h */,
 				019368F01FBBCE4A00788B28 /* UIImage+Converter.m */,
+				019368D01FB956BB00788B28 /* ShaderUtil.h */,
+				019368E71FB9944700788B28 /* vecmath.h */,
+				01D0D2471FBEBF7500B9455B /* Types.h */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -336,10 +374,14 @@
 				019368E11FB967F700788B28 /* Square.cpp in Sources */,
 				019368F11FBBCE4B00788B28 /* UIImage+Converter.m in Sources */,
 				012731051FB5435F00E69911 /* ViewController.mm in Sources */,
+				01D0D2451FBEBE3A00B9455B /* ProjectionMatrix.cpp in Sources */,
+				01D0D2491FBED72A00B9455B /* CameraCube.cpp in Sources */,
 				012731101FB5435F00E69911 /* main.m in Sources */,
+				019368F91FBC310100788B28 /* CameraController.mm in Sources */,
 				012731021FB5435F00E69911 /* AppDelegate.m in Sources */,
 				019368E91FBAC90000788B28 /* TextureCube.cpp in Sources */,
 				019368E51FB980CE00788B28 /* Cube.cpp in Sources */,
+				019368F31FBC200400788B28 /* Background.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
