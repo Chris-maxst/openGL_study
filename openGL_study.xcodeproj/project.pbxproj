@@ -13,8 +13,6 @@
 		0127310A1FB5435F00E69911 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012731091FB5435F00E69911 /* Assets.xcassets */; };
 		0127310D1FB5435F00E69911 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0127310B1FB5435F00E69911 /* LaunchScreen.storyboard */; };
 		012731101FB5435F00E69911 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0127310F1FB5435F00E69911 /* main.m */; };
-		0127311A1FB5435F00E69911 /* openGL_studyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012731191FB5435F00E69911 /* openGL_studyTests.m */; };
-		012731251FB5435F00E69911 /* openGL_studyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012731241FB5435F00E69911 /* openGL_studyUITests.m */; };
 		0127313A1FB565FB00E69911 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012731391FB565DC00E69911 /* OpenGLES.framework */; };
 		0127313B1FB5660300E69911 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012731381FB565C800E69911 /* QuartzCore.framework */; };
 		019368E11FB967F700788B28 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 019368DF1FB967F700788B28 /* Square.cpp */; };
@@ -34,23 +32,6 @@
 		01D0D2491FBED72A00B9455B /* CameraCube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01D0D2481FBED72A00B9455B /* CameraCube.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		012731161FB5435F00E69911 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 012730F51FB5435F00E69911 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 012730FC1FB5435F00E69911;
-			remoteInfo = openGL_study;
-		};
-		012731211FB5435F00E69911 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 012730F51FB5435F00E69911 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 012730FC1FB5435F00E69911;
-			remoteInfo = openGL_study;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		012730FD1FB5435F00E69911 /* openGL_study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openGL_study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012731001FB5435F00E69911 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,12 +43,6 @@
 		0127310C1FB5435F00E69911 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0127310E1FB5435F00E69911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0127310F1FB5435F00E69911 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		012731151FB5435F00E69911 /* openGL_studyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openGL_studyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		012731191FB5435F00E69911 /* openGL_studyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = openGL_studyTests.m; sourceTree = "<group>"; };
-		0127311B1FB5435F00E69911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		012731201FB5435F00E69911 /* openGL_studyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openGL_studyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		012731241FB5435F00E69911 /* openGL_studyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = openGL_studyUITests.m; sourceTree = "<group>"; };
-		012731261FB5435F00E69911 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		012731381FB565C800E69911 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		012731391FB565DC00E69911 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		019368D01FB956BB00788B28 /* ShaderUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderUtil.h; sourceTree = "<group>"; };
@@ -113,20 +88,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		012731121FB5435F00E69911 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0127311D1FB5435F00E69911 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -134,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				012730FF1FB5435F00E69911 /* openGL_study */,
-				012731181FB5435F00E69911 /* openGL_studyTests */,
-				012731231FB5435F00E69911 /* openGL_studyUITests */,
 				012730FE1FB5435F00E69911 /* Products */,
 				012731371FB565C800E69911 /* Frameworks */,
 			);
@@ -145,8 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				012730FD1FB5435F00E69911 /* openGL_study.app */,
-				012731151FB5435F00E69911 /* openGL_studyTests.xctest */,
-				012731201FB5435F00E69911 /* openGL_studyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,24 +123,6 @@
 				019368F81FBC310100788B28 /* CameraController.mm */,
 			);
 			path = openGL_study;
-			sourceTree = "<group>";
-		};
-		012731181FB5435F00E69911 /* openGL_studyTests */ = {
-			isa = PBXGroup;
-			children = (
-				012731191FB5435F00E69911 /* openGL_studyTests.m */,
-				0127311B1FB5435F00E69911 /* Info.plist */,
-			);
-			path = openGL_studyTests;
-			sourceTree = "<group>";
-		};
-		012731231FB5435F00E69911 /* openGL_studyUITests */ = {
-			isa = PBXGroup;
-			children = (
-				012731241FB5435F00E69911 /* openGL_studyUITests.m */,
-				012731261FB5435F00E69911 /* Info.plist */,
-			);
-			path = openGL_studyUITests;
 			sourceTree = "<group>";
 		};
 		012731331FB5438500E69911 /* Supporting Files */ = {
@@ -256,42 +195,6 @@
 			productReference = 012730FD1FB5435F00E69911 /* openGL_study.app */;
 			productType = "com.apple.product-type.application";
 		};
-		012731141FB5435F00E69911 /* openGL_studyTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0127312C1FB5435F00E69911 /* Build configuration list for PBXNativeTarget "openGL_studyTests" */;
-			buildPhases = (
-				012731111FB5435F00E69911 /* Sources */,
-				012731121FB5435F00E69911 /* Frameworks */,
-				012731131FB5435F00E69911 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				012731171FB5435F00E69911 /* PBXTargetDependency */,
-			);
-			name = openGL_studyTests;
-			productName = openGL_studyTests;
-			productReference = 012731151FB5435F00E69911 /* openGL_studyTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0127311F1FB5435F00E69911 /* openGL_studyUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0127312F1FB5435F00E69911 /* Build configuration list for PBXNativeTarget "openGL_studyUITests" */;
-			buildPhases = (
-				0127311C1FB5435F00E69911 /* Sources */,
-				0127311D1FB5435F00E69911 /* Frameworks */,
-				0127311E1FB5435F00E69911 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				012731221FB5435F00E69911 /* PBXTargetDependency */,
-			);
-			name = openGL_studyUITests;
-			productName = openGL_studyUITests;
-			productReference = 012731201FB5435F00E69911 /* openGL_studyUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -304,16 +207,6 @@
 					012730FC1FB5435F00E69911 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
-					};
-					012731141FB5435F00E69911 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 012730FC1FB5435F00E69911;
-					};
-					0127311F1FB5435F00E69911 = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 012730FC1FB5435F00E69911;
 					};
 				};
 			};
@@ -331,8 +224,6 @@
 			projectRoot = "";
 			targets = (
 				012730FC1FB5435F00E69911 /* openGL_study */,
-				012731141FB5435F00E69911 /* openGL_studyTests */,
-				0127311F1FB5435F00E69911 /* openGL_studyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -347,20 +238,6 @@
 				0127310D1FB5435F00E69911 /* LaunchScreen.storyboard in Resources */,
 				0127310A1FB5435F00E69911 /* Assets.xcassets in Resources */,
 				012731081FB5435F00E69911 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		012731131FB5435F00E69911 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0127311E1FB5435F00E69911 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,36 +262,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		012731111FB5435F00E69911 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0127311A1FB5435F00E69911 /* openGL_studyTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0127311C1FB5435F00E69911 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				012731251FB5435F00E69911 /* openGL_studyUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		012731171FB5435F00E69911 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 012730FC1FB5435F00E69911 /* openGL_study */;
-			targetProxy = 012731161FB5435F00E69911 /* PBXContainerItemProxy */;
-		};
-		012731221FB5435F00E69911 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 012730FC1FB5435F00E69911 /* openGL_study */;
-			targetProxy = 012731211FB5435F00E69911 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		012731061FB5435F00E69911 /* Main.storyboard */ = {
@@ -484,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -533,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -570,60 +418,6 @@
 			};
 			name = Release;
 		};
-		0127312D1FB5435F00E69911 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = openGL_studyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "maxst.openGL-studyTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openGL_study.app/openGL_study";
-			};
-			name = Debug;
-		};
-		0127312E1FB5435F00E69911 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = openGL_studyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "maxst.openGL-studyTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/openGL_study.app/openGL_study";
-			};
-			name = Release;
-		};
-		012731301FB5435F00E69911 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = openGL_studyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "maxst.openGL-studyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = openGL_study;
-			};
-			name = Debug;
-		};
-		012731311FB5435F00E69911 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = openGL_studyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "maxst.openGL-studyUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = openGL_study;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -641,24 +435,6 @@
 			buildConfigurations = (
 				0127312A1FB5435F00E69911 /* Debug */,
 				0127312B1FB5435F00E69911 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0127312C1FB5435F00E69911 /* Build configuration list for PBXNativeTarget "openGL_studyTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0127312D1FB5435F00E69911 /* Debug */,
-				0127312E1FB5435F00E69911 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0127312F1FB5435F00E69911 /* Build configuration list for PBXNativeTarget "openGL_studyUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				012731301FB5435F00E69911 /* Debug */,
-				012731311FB5435F00E69911 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
